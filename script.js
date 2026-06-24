@@ -19,8 +19,11 @@ let tickets = JSON.parse(localStorage.getItem("tickets")) || [
   }
 ];
 
+let editIndex = null;
+
 const ticketTable = document.getElementById("ticketTable");
 const searchInput = document.getElementById("searchInput");
+const submitButton = document.getElementById("submitButton");
 
 function saveTickets() {
   localStorage.setItem("tickets", JSON.stringify(tickets));
@@ -44,6 +47,7 @@ function displayTickets(data) {
       <td class="${statusClass}">${ticket.status}</td>
       <td>${ticket.notes}</td>
       <td>
+        <button onclick="editTicket(${index})">Edit</button>
         <button onclick="deleteTicket(${index})">Delete</button>
       </td>
     `;
@@ -54,7 +58,7 @@ function displayTickets(data) {
   updateMetrics();
 }
 
-function addTicket() {
+function saveTicket() {
   const customer = document.getElementById("customerName").value.trim();
   const issue = document.getElementById("issueTitle").value.trim();
   const status = document.getElementById("ticketStatus").value;
@@ -65,26 +69,49 @@ function addTicket() {
     return;
   }
 
-  tickets.push({
+  const ticketData = {
     customer,
     issue,
     status,
     notes
-  });
+  };
+
+  if (editIndex === null) {
+    tickets.push(ticketData);
+  } else {
+    tickets[editIndex] = ticketData;
+    editIndex = null;
+    submitButton.textContent = "Create Ticket";
+  }
 
   saveTickets();
-
-  document.getElementById("customerName").value = "";
-  document.getElementById("issueTitle").value = "";
-  document.getElementById("ticketNotes").value = "";
-
+  clearForm();
   displayTickets(tickets);
+}
+
+function editTicket(index) {
+  const ticket = tickets[index];
+
+  document.getElementById("customerName").value = ticket.customer;
+  document.getElementById("issueTitle").value = ticket.issue;
+  document.getElementById("ticketStatus").value = ticket.status;
+  document.getElementById("ticketNotes").value = ticket.notes;
+
+  editIndex = index;
+  submitButton.textContent = "Update Ticket";
 }
 
 function deleteTicket(index) {
   tickets.splice(index, 1);
   saveTickets();
   displayTickets(tickets);
+}
+
+function clearForm() {
+  document.getElementById("customerName").value = "";
+  document.getElementById("issueTitle").value = "";
+  document.getElementById("ticketNotes").value = "";
+  document.getElementById("ticketStatus").value = "Open";
 }
 
 function updateMetrics() {
