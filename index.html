@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Support Ticket System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Customer Support Ticket System</h1>
+    <p>Customer Service and Help Desk Dashboard</p>
+</header>
+
+<main>
+
+<section class="metrics">
+    <div class="card">
+        <h3>Total Tickets</h3>
+        <p id="totalTickets">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Open</h3>
+        <p id="openTickets">0</p>
+    </div>
+
+    <div class="card">
+        <h3>In Progress</h3>
+        <p id="progressTickets">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Closed</h3>
+        <p id="closedTickets">0</p>
+    </div>
+</section>
+
+<section>
+
+<h2>Create Ticket</h2>
+
+<input type="text" id="customerName" placeholder="Customer Name">
+
+<input type="text" id="issueTitle" placeholder="Issue Title">
+
+<select id="ticketStatus">
+    <option>Open</option>
+    <option>In Progress</option>
+    <option>Closed</option>
+</select>
+
+<textarea id="ticketNotes" rows="4" placeholder="Issue Description"></textarea>
+
+<button onclick="addTicket()">Create Ticket</button>
+
+</section>
+
+<section>
+
+<h2>Search Tickets</h2>
+
+<input type="text" id="searchInput" placeholder="Search Customer, Issue, Status">
+
+</section>
+
+<section>
+
+<h2>Ticket Queue</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Customer</th>
+<th>Issue</th>
+<th>Status</th>
+<th>Notes</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="ticketTable"></tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<footer>
+Created by Rolando Gonzalez
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
