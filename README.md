@@ -1,3 +1,8 @@
+![HTML5](https://img.shields.io/badge/HTML5-Project-orange)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-yellow)
+![GitHub%20Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-green)
+
 # Customer Support Ticket System
 
 Live Site: https://rolinrole.github.io/customer-support-ticket-system/
@@ -12,6 +17,15 @@ A customer service and help desk dashboard built with HTML, CSS, and JavaScript.
 
 Live Site:
 https://rolinrole.github.io/customer-support-ticket-system/
+
+## Repository
+
+GitHub:
+https://github.com/rolinrole/customer-support-ticket-system
+
+## Business Value
+
+This application demonstrates customer support workflows including ticket creation, status tracking, issue management, and service reporting.
 
 ## Key Features
 
