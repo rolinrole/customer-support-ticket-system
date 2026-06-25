@@ -1,5 +1,9 @@
 # Customer Support Ticket System
 
+## Screenshot
+
+![Dashboard](images/dashboard.png)
+
 A customer service and help desk dashboard built with HTML, CSS, and JavaScript.
 
 ## Features
