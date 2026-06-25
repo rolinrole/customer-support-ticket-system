@@ -45,15 +45,11 @@ https://rolinrole.github.io/customer-support-ticket-system/
 
 ## Application Workflow
 
-User creates ticket
-↓
-Ticket stored in browser Local Storage
-↓
-Dashboard updates metrics
-↓
-Ticket can be searched, edited, or deleted
-↓
-Changes automatically persist after page refresh
+1. User creates a ticket
+2. Ticket is stored in Local Storage
+3. Dashboard metrics update automatically
+4. Tickets can be searched, edited, or deleted
+5. Changes persist after page refresh
 
 ## Technologies
 
