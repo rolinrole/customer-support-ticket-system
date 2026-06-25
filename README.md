@@ -8,14 +8,52 @@ Live Site: https://rolinrole.github.io/customer-support-ticket-system/
 
 A customer service and help desk dashboard built with HTML, CSS, and JavaScript.
 
-## Features
+## Live Demo
+
+Live Site:
+https://rolinrole.github.io/customer-support-ticket-system/
+
+## Key Features
 
 - Create support tickets
-- Search tickets
+- Edit existing tickets
+- Delete tickets
+- Search ticket records
 - Track ticket status
 - Dashboard metrics
-- Customer issue management
-- Ticket queue management
+- Local Storage persistence
+
+## Skills Demonstrated
+
+- Customer Service
+- Technical Support
+- Help Desk Operations
+- Issue Tracking
+- Dashboard Development
+- Front End Development
+- HTML5
+- CSS3
+- JavaScript
+- Local Storage
+- CRUD Operations
+- Search & Filtering
+- Dashboard Design
+- Customer Support Workflows
+- Git
+- GitHub
+- GitHub Pages
+
+## Application Workflow
+
+User creates ticket
+↓
+Ticket stored in browser Local Storage
+↓
+Dashboard updates metrics
+↓
+Ticket can be searched, edited, or deleted
+↓
+Changes automatically persist after page refresh
 
 ## Technologies
 
@@ -26,14 +64,14 @@ A customer service and help desk dashboard built with HTML, CSS, and JavaScript.
 - GitHub
 - GitHub Pages
 
-## Skills Demonstrated
+## Future Enhancements
 
-- Customer Service
-- Technical Support
-- Help Desk Operations
-- Issue Tracking
-- Dashboard Development
-- Front End Development
+- User authentication
+- Ticket priorities
+- Email notifications
+- SQL database integration
+- Cloud deployment
+- Analytics dashboard
 
 ## Author
 
